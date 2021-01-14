@@ -1,10 +1,13 @@
-class estimador(n,z,p,q,d):
+def main() :
+    n = float(input("nro de muestra: "))
+    z = float(input ("coeficiente de confianza: "))
+    p = float(input ("Probabilidad de exito: "))
+    q = float(input ("Probabilidad de fracaso: "))
+    resultado = n * z * z * p * q /(0.05*0.05*(n-1) + 1.645 * 1.645 * 0.5 * 0.5 )
+    print( resultado)
 
- resultado = n * z * z * p * q /(0.05*0.05*(n-1) + 1.645 * 1.645 * 0.5 * 0.5 )
- #return resultado
- print( resultado)
-
-#N: Tamaño de la población. 32,084 personas.
+main()
+#N: Tamaño de la población. 32,084 personas. o 70620
 
 #Z: Coeficiente de confianza. Z = 1.645 para un nivel de confianza del 90%
 
